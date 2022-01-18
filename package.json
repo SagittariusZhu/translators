@@ -1,13 +1,18 @@
 {
-  "name": "google-translate-api",
+  "name": "translators",
   "version": "1.0.0",
-  "description": "",
+  "description": "Translators is a library which aims to bring free, multiple, enjoyable translation to individuals and students in Nodejs.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel -d ./lib src",
+    "eslint": "eslint --fix ./src",
+    "mocha": "mocha",
+    "pretest": "npm run build",
+    "test": "npm run eslint && npm run mocha",
+    "patch": "npm version patch"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Edward Zhu (zhuhy163@163.com)",
+  "license": "MIT",
   "dependencies": {
     "@google-cloud/translate": "^6.3.1",
     "blueimp-md5": "^2.19.0",
@@ -16,5 +21,13 @@
     "lodash": "^4.17.21",
     "qs": "^6.10.3",
     "tough-cookie": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7",
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/preset-env": "^7.16.8",
+    "eslint": "^8.7.0",
+    "mocha": "^9.1.4"
   }
 }
