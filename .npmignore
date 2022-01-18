@@ -8,6 +8,7 @@ README.hbs
 output.md
 output/
 examples/
+src/
 
 # dotfiles
 .travis.yml
