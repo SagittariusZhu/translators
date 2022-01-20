@@ -12,7 +12,7 @@ const sleep = async (seconds) => {
 	return new Promise(resolve => setTimeout(resolve, seconds * 1000));
 };
 
-const warn = (str) => {
+const debug = (str) => {
 	console.debug(str);
 };
 

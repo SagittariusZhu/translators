@@ -9,6 +9,7 @@
     "mocha": "mocha",
     "pretest": "npm run build",
     "test": "npm run eslint && npm run mocha",
+    "git": "git add . && git commit -m",
     "postgit": "npm version patch"
   },
   "author": "Edward Zhu (zhuhy163@163.com)",
@@ -29,5 +30,21 @@
     "@babel/preset-env": "^7.16.8",
     "eslint": "^8.7.0",
     "mocha": "^9.1.4"
-  }
+  },
+  "keywords": [
+    "javascript",
+    "translate",
+    "baidu",
+    "youdao",
+    "google",
+    "bing",
+    "百度翻译",
+    "有道翻译",
+    "谷歌翻译",
+    "必应翻译"
+  ],
+  "bugs": {
+    "url": "https://github.com/SagittariusZhu/translators/issues"
+  },
+  "homepage": "https://github.com/SagittariusZhu/translators"
 }
