@@ -56,7 +56,7 @@ const get_sign = (sign_html, ts_text, gtk) => {
 };
 
 const get_host_info = (host_html, sign_html, ts_text) => {
-	let gtk = host_html.match('window.gtk = \'(.*?)\';')[1];
+	let gtk = host_html.match('window.gtk = "(.*?)";')[1];
 	let sign = get_sign(sign_html, ts_text, gtk);
 
 	const $ = cheerio.load(host_html);
@@ -69,7 +69,7 @@ const get_host_info = (host_html, sign_html, ts_text) => {
 		}
 	}
 
-	let js_data = eval(`a=${js_txt}`);
+	let js_data = eval(`localStorage={};localStorage.getItem=function(){return "1"};a=${js_txt}`);
 	return Object.assign(js_data, { 'gtk': gtk, 'sign': sign });
 };
 

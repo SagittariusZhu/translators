@@ -40,7 +40,7 @@ const get_host_info = (host_html) => {
 };
 
 const get_tk = (host_html) => {
-	let result_str = host_html.match('var params_RichTranslateHelper = (.*?);')[1];
+	let result_str = host_html.match('var params_AbusePreventionHelper = (.*?);')[1];
 	let result = eval(result_str);
 	return { 'key': result[0], 'token': result[1] };
 };
